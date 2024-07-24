@@ -1,35 +1,47 @@
-import user from "assets/user.png";
+import avatar from "assets/avatar.png";
 import StarIcon from "assets/star_icon.svg";
 import BarIcon from "assets/bar_icon.svg";
+
+import { UserId } from "types/user";
+import { useAppSelector } from "store/hooks";
+import { selectUserById } from "store/slices/appSlice/selectors";
 
 // CSS prefix: .bdcard-
 import "./style.css";
 
-function Card() {
+type CardProps = {
+  userId: UserId;
+};
+
+function Card({ userId }: CardProps) {
+  const user = useAppSelector((s) => selectUserById(s, userId));
+
+  const { name, location, status, rate, phone, is_new, is_followed } = user;
+
   return (
     <div className="bdcard-cont">
       <div className="bdcard-avatar-cont">
-        <img src={user} alt="User image" className="bdcard-avatar" />
+        <img src={avatar} alt={name} className="bdcard-avatar" />
       </div>
 
       <div className="bdcard-info">
-        <div className="bdcard-name-cont">
+        <div className="bdcard-name-cont" data-status={status}>
           <BarIcon />
-          <span className="bdcard-name">Ajay MacAllast</span>
-          <span className="bdcard-name-tag">New</span>
+          <span className="bdcard-name">{name}</span>
+          {is_new && <span className="bdcard-name-tag">New</span>}
         </div>
 
-        <p className="bdcard-location">Cairo</p>
+        <p className="bdcard-location">{location}</p>
       </div>
 
       <div className="bdcard-rate">
-        <span>4.0</span>
+        <span>{rate}</span>
         <StarIcon />
       </div>
 
       <div className="bdcard-phone-cont">
-        <p className="bdcard-phone">234 224 555</p>
-        <span className="bdcard-follow-tag">followed</span>
+        <p className="bdcard-phone">{phone}</p>
+        {is_followed && <span className="bdcard-follow-tag">followed</span>}
       </div>
     </div>
   );

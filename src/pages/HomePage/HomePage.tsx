@@ -1,16 +1,16 @@
 import Board from "components/Board/Board";
 
+import { useAppSelector } from "store/hooks";
+import { selectBoardsIds } from "store/slices/appSlice/selectors";
+
 // CSS prefix: .homepage-
 import "./style.css";
 
 function HomePage() {
-  return (
-    <div className="homepage-cont">
-      <Board />
-      <Board />
-      <Board />
-    </div>
-  );
+  const boardsIds = useAppSelector(selectBoardsIds);
+
+  const elems = boardsIds.map((id) => <Board key={id} boardId={id} />);
+  return <div className="homepage-cont">{elems}</div>;
 }
 
 export default HomePage;

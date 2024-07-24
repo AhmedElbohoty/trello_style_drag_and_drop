@@ -34,6 +34,14 @@
   height: 6px;
   width: 100%;
   border-radius: 6px;
+  background-color: var(--bar-blue);
+}
+
+.bdstats-bar[data-name="Shortlisted"] {
+  background-color: var(--bar-green);
+}
+
+.bdstats-bar[data-name="Interview"] {
   background-color: var(--bar-red);
 }
 /* #endregion bar */

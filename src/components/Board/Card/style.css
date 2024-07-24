@@ -10,6 +10,7 @@
   gap: 16px;
   border-radius: 18px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 /* #region avatar */
@@ -50,8 +51,16 @@
   min-width: 14px;
 }
 
-.bdcard-name-cont .svg-bar-path {
+.bdcard-name-cont[data-status="0"] .svg-bar-path {
+  fill: var(--bar-red);
+}
+
+.bdcard-name-cont[data-status="1"] .svg-bar-path {
   fill: var(--bar-green);
+}
+
+.bdcard-name-cont[data-status="2"] .svg-bar-path {
+  fill: var(--yellow);
 }
 
 .bdcard-name {
