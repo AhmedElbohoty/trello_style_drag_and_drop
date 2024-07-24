@@ -10,6 +10,8 @@
   --bar-blue: #49bbf7;
   --bar-red: #ff5e55;
 
+  --yellow: #ffcb00;
+
   --board-bg: var(--primary-1);
 
   /* Fonts */
@@ -17,7 +19,7 @@
 
   /* Scrollbar */
   --scrollbar-track-bg: transparent;
-  --scrollbar-handle-bg: var(--primary-2);
+  --scrollbar-handle-bg: #d7dee7;
 
   /* Transition */
   --trans-duration: 400ms;
@@ -36,4 +38,15 @@ body,
   height: 100%;
   width: 100%;
   font-family: var(--font-family);
+}
+
+button {
+  border: none;
+  font-size: 100%;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+button:focus {
+  outline: none;
 }

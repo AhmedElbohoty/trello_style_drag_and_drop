@@ -1,0 +1,19 @@
+.bdcards-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* #region scrollbar */
+.bdcards-scrollbar {
+  width: calc(100% + 12px);
+  flex: 1;
+  max-height: 100%;
+  padding-right: 12px;
+}
+
+.bdcards-scrollbar > .os-scrollbar {
+  --os-size: 4px;
+  padding: 0;
+}
+/* #endregion scrollbar */

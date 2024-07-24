@@ -1,17 +1,19 @@
 .bdheader {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 /* #region checkbox */
 .bdheader-checkbox {
   display: flex;
+  align-items: center;
   gap: 8px;
 }
 
 .bdheader-checkbox-box {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -43,6 +45,37 @@
 }
 /* #endregion checkbox */
 
+/* #region button */
+.bdheader-btn {
+  width: 130px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--secondary-1);
+  background-color: var(--secondary-2);
+  font-size: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: color var(--trans-timing-function) var(--trans-duration),
+    background-color var(--trans-timing-function) var(--trans-duration);
+  cursor: pointer;
+}
+
+.bdheader-btn .svg-plus {
+  width: 14px;
+  height: 14px;
+}
+
+@media (hover: hover) {
+  .bdheader-btn:hover {
+    color: var(--secondary-2);
+    background-color: var(--secondary-1);
+  }
+}
+/* #endregion button */
+
 /* #region arrow */
 .bdheader-arrow {
   width: 18px;
@@ -50,7 +83,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: rotate(-45deg);
+  transform: rotate(180deg);
   cursor: pointer;
+}
+
+.bdheader-arrow .svg-upload {
+  width: 18px;
+  height: 18px;
+}
+
+.bdheader-arrow .svg-upload-path {
+  fill: var(--primary-2);
+  transition: fill var(--trans-timing-function) var(--trans-duration);
+}
+
+@media (hover: hover) {
+  .bdheader-arrow:hover .svg-upload-path {
+    fill: var(--secondary-1);
+  }
 }
 /* #endregion arrow */

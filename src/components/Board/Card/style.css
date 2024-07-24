@@ -1,0 +1,133 @@
+.bdcard-cont {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  grid-template-rows: 52px 28px;
+  grid-template-areas:
+    "avatar info"
+    "rate   phone";
+  background-color: #ffffff;
+  padding: 12px;
+  gap: 16px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* #region avatar */
+.bdcard-avatar-cont {
+  grid-area: avatar;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.bdcard-avatar {
+  width: 100%;
+  height: 100%;
+}
+/* #endregion avatar */
+
+/* #region info */
+.bdcard-info {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2px 0;
+  overflow: hidden;
+}
+
+.bdcard-name-cont {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-3);
+  font-size: 13px;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.bdcard-name-cont .svg-bar {
+  width: 14px;
+  min-width: 14px;
+}
+
+.bdcard-name-cont .svg-bar-path {
+  fill: var(--bar-green);
+}
+
+.bdcard-name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.bdcard-name-tag {
+  display: block;
+  width: 52px;
+  min-width: 52px;
+  height: 28px;
+  margin-left: auto;
+  border-radius: 10px;
+  color: var(--secondary-1);
+  background-color: var(--secondary-2);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: center;
+}
+
+.bdcard-location {
+  color: var(--primary-2);
+  font-size: 13px;
+  font-weight: 500;
+}
+/* #endregion info */
+
+/* #region rate */
+.bdcard-rate {
+  grid-area: rate;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: var(--primary-1);
+}
+
+.bdcard-rate .svg-star {
+  width: 14px;
+  height: 14px;
+}
+
+.bdcard-rate .svg-star-path {
+  fill: var(--yellow);
+}
+/* #endregion rate */
+
+/* #region phone */
+.bdcard-phone-cont {
+  grid-area: phone;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.bdcard-phone {
+  font-size: 13px;
+  color: var(--primary-2);
+}
+
+.bdcard-follow-tag {
+  height: 28px;
+  min-width: 78px;
+  border-radius: 8px;
+  background-color: var(--secondary-1);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: center;
+}
+/* #endregion phone */
