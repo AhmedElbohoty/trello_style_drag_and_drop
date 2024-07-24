@@ -1,12 +1,8 @@
-.homepage-scroll {
-  max-height: 300px;
-  border: red solid;
-  display: flex;
-  overflow: scroll;
-}
-
-.homepage-scroll > .os-scrollbar {
-  --os-size: 4px;
-  margin: 2px;
-  padding: 0;
+.homepage-cont {
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  gap: 24px;
+  padding: 32px;
 }

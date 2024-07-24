@@ -1,10 +1,14 @@
-// CSS prefix: .homepage
+import Board from "components/Board/Board";
+
+// CSS prefix: .homepage-
 import "./style.css";
 
 function HomePage() {
   return (
-    <div>
-      <p>Homepage</p>
+    <div className="homepage-cont">
+      <Board />
+      <Board />
+      <Board />
     </div>
   );
 }

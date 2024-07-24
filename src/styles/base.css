@@ -1,10 +1,23 @@
 :root {
+  --primary-1: hsl(216, 24%, 96%);
+  --primary-2: #b4c2d4;
+  --primary-3: #484750;
+
+  --secondary-1: #3165f3;
+  --secondary-2: #d8e1f6;
+
+  --board-bg: var(--primary-1);
+
   /* Fonts */
   --font-family: "Roboto", sans-serif;
 
   /* Scrollbar */
   --scrollbar-track-bg: transparent;
-  --scrollbar-handle-bg: #d8dfe8;
+  --scrollbar-handle-bg: var(--primary-2);
+
+  /* Transition */
+  --trans-duration: 400ms;
+  --trans-timing-function: ease-in-out;
 }
 
 * {
