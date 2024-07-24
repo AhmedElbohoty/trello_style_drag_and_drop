@@ -2,7 +2,11 @@
 import "./style.css";
 
 function HomePage() {
-  return <div>HomePage</div>;
+  return (
+    <div>
+      <p>Homepage</p>
+    </div>
+  );
 }
 
 export default HomePage;

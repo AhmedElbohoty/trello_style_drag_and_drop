@@ -1,5 +1,10 @@
 :root {
+  /* Fonts */
   --font-family: "Roboto", sans-serif;
+
+  /* Scrollbar */
+  --scrollbar-track-bg: transparent;
+  --scrollbar-handle-bg: #d8dfe8;
 }
 
 * {

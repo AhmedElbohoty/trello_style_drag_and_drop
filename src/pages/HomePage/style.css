@@ -1,0 +1,12 @@
+.homepage-scroll {
+  max-height: 300px;
+  border: red solid;
+  display: flex;
+  overflow: scroll;
+}
+
+.homepage-scroll > .os-scrollbar {
+  --os-size: 4px;
+  margin: 2px;
+  padding: 0;
+}
