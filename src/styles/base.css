@@ -6,6 +6,10 @@
   --secondary-1: #3165f3;
   --secondary-2: #d8e1f6;
 
+  --bar-green: #70d36b;
+  --bar-blue: #49bbf7;
+  --bar-red: #ff5e55;
+
   --board-bg: var(--primary-1);
 
   /* Fonts */

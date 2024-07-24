@@ -1,7 +1,6 @@
 .bdheader {
   display: flex;
   justify-content: space-between;
-  margin: 16px;
 }
 
 /* #region checkbox */

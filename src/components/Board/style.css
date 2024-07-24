@@ -1,6 +1,9 @@
 .board {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   height: 100%;
   background-color: var(--board-bg);
   border-radius: 16px;
-  padding: 16px;
+  padding: 32px 24px;
 }
