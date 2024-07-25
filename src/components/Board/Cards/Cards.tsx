@@ -1,5 +1,3 @@
-import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
-
 import Card from "components/Board/Card/Card";
 import { useAppSelector } from "store/hooks";
 import { selectBoardUserIds } from "store/slices/appSlice/selectors";
@@ -17,9 +15,9 @@ function Cards() {
   ));
 
   return (
-    <OverlayScrollbarsComponent className="bdcards-scrollbar">
+    <div className="bdcards-scrollbar">
       <section className="bdcards-cont">{elements}</section>
-    </OverlayScrollbarsComponent>
+    </div>
   );
 }
 
