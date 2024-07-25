@@ -7,6 +7,8 @@ export const selectUsers = ({ app }: RootState) => app.users;
 
 export const selectUserById = ({ app }: RootState, id: UserId) => app.users[id];
 
+export const selectBoards = ({ app }: RootState) => app.boards;
+
 export const selectBoardsIds = ({ app }: RootState) => app.boardsIds;
 
 export const selectBoardById = ({ app }: RootState, id: BoardId) =>

@@ -12,7 +12,9 @@ function Cards() {
   const { boardId } = useBoardContext();
   const userIds = useAppSelector((s) => selectBoardUserIds(s, boardId));
 
-  const elements = userIds.map((id) => <Card key={id} userId={id} />);
+  const elements = userIds.map((id, index) => (
+    <Card key={id} userId={id} index={index} />
+  ));
 
   return (
     <OverlayScrollbarsComponent className="bdcards-scrollbar">

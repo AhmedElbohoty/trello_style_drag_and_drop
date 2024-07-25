@@ -1,7 +1,7 @@
 import { Board, BoardId } from "types/board";
 import { User, UserId } from "types/user";
 
-type InitialState = {
+export type InitialState = {
   boards: Record<BoardId, Board>;
   boardsIds: BoardId[];
   users: Record<UserId, User>;
