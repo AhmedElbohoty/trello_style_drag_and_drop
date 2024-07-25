@@ -14,11 +14,7 @@ function Cards() {
     <Card key={id} userId={id} index={index} />
   ));
 
-  return (
-    <div className="bdcards-scrollbar">
-      <section className="bdcards-cont">{elements}</section>
-    </div>
-  );
+  return <section className="bdcards-cont">{elements}</section>;
 }
 
 export default Cards;

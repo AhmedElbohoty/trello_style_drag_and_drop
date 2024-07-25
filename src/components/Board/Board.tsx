@@ -15,22 +15,24 @@ type BoardProps = { boardId: BoardId };
 function Board({ boardId }: BoardProps) {
   return (
     <BoardContext.Provider value={{ boardId }}>
-      <Droppable droppableId={boardId}>
-        {(provided) => {
-          return (
-            <section
-              className="board"
-              ref={provided.innerRef}
-              {...provided.droppableProps}
-            >
-              <Header />
-              <Stats />
-              {/* {provided.placeholder} */}
-              <Cards />
-            </section>
-          );
-        }}
-      </Droppable>
+      <section className="board">
+        <Header />
+        <Stats />
+        <Droppable droppableId={boardId}>
+          {(provided) => {
+            return (
+              <div
+                className="bdcards-scrollbar"
+                ref={provided.innerRef}
+                {...provided.droppableProps}
+              >
+                {/* {provided.placeholder} */}
+                <Cards />
+              </div>
+            );
+          }}
+        </Droppable>
+      </section>
     </BoardContext.Provider>
   );
 }
